@@ -4,47 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the Boxicons library for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
     <title>Speech To Text Project</title>
 </head>
 
 <body>
-
     <div class="container">
+        <!-- Header for the application -->
         <p class="header">Speech To Text</p>
         <div class="settings">
+            <!-- Dropdown for language selection -->
             <div class="language">
                 <p>Language :</p>
                 <select id="language"></select>
+                <!-- Options for languages will be populated by JavaScript -->
             </div>
         </div>
+
+        <!-- Separator line for visual separation -->
         <div class="separator"></div>
+
+        <!-- Button to start or stop speech recognition -->
         <button class="btn record">
             <div class="icon">
+                <!-- Microphone icon and loader animation for recording status -->
                 <i class='bx bx-microphone'></i>
                 <i class='bx bx-loader bx-spin'></i>
             </div>
-            <p>Start Listening</p>
+            <p>Start Listening</p> <!-- Button label text -->
         </button>
 
+        <!-- Section to display the speech recognition result -->
         <p>Result :</p>
         <div class="result" spellcheck="false">
-            <p class="resultText"></p>
+            <p class="resultText"></p> <!-- Placeholder for recognized text -->
         </div>
 
+        <!-- Another separator line -->
         <div class="separator"></div>
 
         <div class="buttons">
+            <!-- Button to clear the results -->
             <button class="btn clear">
                 Clear
             </button>
+            <!-- Button to download the recognized text -->
             <button class="btn download" disabled>Download</button>
+            <!-- Initially disabled, will be enabled once text is recognized -->
         </div>
-
     </div>
 
+    <!-- Link to JavaScript file containing language data -->
     <script src="languages.js"></script>
+    <!-- Link to JavaScript file containing main script logic -->
     <script src="script.js"></script>
 </body>
 
